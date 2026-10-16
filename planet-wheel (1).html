@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07041a">
+  <title>Planet Wheel — Spin &amp; Win</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Orbitron:wght@600;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-planet">
+  <div class="bg" aria-hidden="true"><div class="bg-stars"></div><div class="bg-stars-2"></div></div>
+
+  <div class="page">
+    <div class="topbar">
+      <a class="back-btn" href="index.html"><span aria-hidden="true">←</span> Back to Home</a>
+      <span class="tag">Cosmic Rewards</span>
+    </div>
+
+    <h1 class="title">Planet Wheel</h1>
+    <p class="subtitle">Launch the wheel and see which prize the galaxy has in store for you!</p>
+
+    <main class="wheel-stage">
+      <div class="wheel-wrap">
+        <div class="pointer" id="pointer" aria-hidden="true">
+          <svg viewBox="0 0 44 56"><path d="M22 54 L4 21 A19 19 0 1 1 40 21 Z"/><circle cx="22" cy="19" r="6"/></svg>
+        </div>
+        <canvas id="wheel" role="img" aria-label="Prize wheel: Neckband, Airpod, 300 Petrol, Case and Glass, Bluetooth Speaker, Better luck next time"></canvas>
+      </div>
+      <button class="spin-btn" id="spinBtn" type="button">SPIN</button>
+      <p class="hint">Tap SPIN and wait for the wheel to stop.</p>
+    </main>
+  </div>
+
+  <!-- Result popup -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-badge"><canvas id="prizeIcon" width="84" height="84"></canvas></div>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-prize" id="modalPrize"></p>
+      <p class="modal-msg" id="modalMsg"></p>
+      <button class="spin-btn" id="modalClose" type="button">OK</button>
+    </div>
+  </div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="wheel.js"></script>
+  <script>
+    SpinWheel.init({
+      segments: [
+        { label: 'Neckband',              icon: 'neckband',  win: true,  colors: ['#3b0f8f', '#8b3cf0'] },
+        { label: 'Airpod',                icon: 'airpod',    win: true,  colors: ['#0b5a74', '#22d3ee'] },
+        { label: '300 Petrol',            icon: 'petrol',    win: true,  colors: ['#8a1250', '#f0508f'] },
+        { label: 'Case + Glass',          icon: 'case',      win: true,  colors: ['#066044', '#2fd8a0'] },
+        { label: 'Bluetooth Speaker',     icon: 'speaker',   win: true,  colors: ['#9a3a06', '#fb923c'] },
+        { label: 'Better luck next time', icon: 'sad',       win: false, colors: ['#151a33', '#5b6585'] }
+      ],
+      theme: {
+        ring:       ['#22d3ee', '#a855f7', '#ec4899', '#22d3ee'],
+        rim:        '#0b0620',
+        bulbOn:     '#8ff6ff',
+        bulbOff:    '#2b1f66',
+        divider:    'rgba(255,255,255,.55)',
+        hub:        ['#ffffff', '#7c3aed'],
+        iconStyle:  '#ffffff',
+        iconGlow:   'rgba(255,255,255,.85)',
+        textColor:  '#ffffff',
+        textStroke: 'rgba(10,4,38,.85)'
+      },
+      winTitle:  'Congratulations! 🎉',
+      loseTitle: 'So close! 🌌',
+      winMessage:  'You won this prize! Show this screen at the billing counter to claim it.',
+      loseMessage: 'No prize this time, but the stars may align on your next visit. Thank you for shopping with us!',
+      confettiColors: ['#22d3ee', '#a855f7', '#ec4899', '#fde047', '#34d399', '#ffffff', '#fb923c']
+    });
+  </script>
+</body>
+</html>

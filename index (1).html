@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07041a">
+  <title>Customer Rewards — Spin &amp; Win</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Orbitron:wght@600;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-home">
+  <div class="bg" aria-hidden="true"><div class="bg-stars"></div><div class="bg-stars-2"></div></div>
+
+  <div class="page">
+    <header class="hero">
+      <span class="eyebrow">★ Customer Reward Program ★</span>
+      <h1>Spin. Win. <span>Celebrate!</span></h1>
+      <p class="lead">Thank you for shopping with us! Choose your wheel below, give it a spin and take home an exciting gift.</p>
+    </header>
+
+    <main class="cards">
+
+      <!-- Planet Wheel -->
+      <a class="card card-planet" href="planet-wheel.html" aria-label="Open the Planet Wheel">
+        <svg class="deco" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <radialGradient id="pg" cx="35%" cy="30%" r="75%">
+              <stop offset="0" stop-color="#e9d5ff"/>
+              <stop offset=".5" stop-color="#8b3cf0"/>
+              <stop offset="1" stop-color="#1e1b4b"/>
+            </radialGradient>
+          </defs>
+          <path d="M4 62 A56 14 0 0 1 116 62" transform="rotate(-18 60 62)" fill="none" stroke="#22d3ee" stroke-width="4" opacity=".55"/>
+          <circle cx="60" cy="60" r="32" fill="url(#pg)"/>
+          <path d="M34 50 Q60 42 86 52" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+          <path d="M4 62 A56 14 0 0 0 116 62" transform="rotate(-18 60 62)" fill="none" stroke="#22d3ee" stroke-width="4"/>
+          <circle cx="104" cy="22" r="3" fill="#fff"/><circle cx="14" cy="26" r="2" fill="#f9a8d4"/><circle cx="20" cy="100" r="2.4" fill="#a5f3fc"/>
+        </svg>
+        <span class="kicker">Cosmic Rewards</span>
+        <h2>Planet Wheel</h2>
+        <p>Blast off and win Neckbands, Airpods, Petrol vouchers, Bluetooth speakers and more!</p>
+        <span class="cta">Spin the Planet <span aria-hidden="true">➜</span></span>
+      </a>
+
+      <!-- Golden Wheel -->
+      <a class="card card-gold" href="golden-wheel.html" aria-label="Open the Golden Wheel">
+        <svg class="deco" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff3a3"/><stop offset=".5" stop-color="#ffd700"/><stop offset="1" stop-color="#b8860b"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="62" r="54" fill="url(#gg)"/>
+          <g stroke="#3a2704" stroke-width="2">
+            <path d="M60 62 L60 14 A48 48 0 0 1 101.57 38 Z" fill="#ffd700"/>
+            <path d="M60 62 L101.57 38 A48 48 0 0 1 101.57 86 Z" fill="#8a6410"/>
+            <path d="M60 62 L101.57 86 A48 48 0 0 1 60 110 Z" fill="#ffd700"/>
+            <path d="M60 62 L60 110 A48 48 0 0 1 18.43 86 Z" fill="#8a6410"/>
+            <path d="M60 62 L18.43 86 A48 48 0 0 1 18.43 38 Z" fill="#ffd700"/>
+            <path d="M60 62 L18.43 38 A48 48 0 0 1 60 14 Z" fill="#8a6410"/>
+          </g>
+          <circle cx="60" cy="62" r="11" fill="url(#gg)" stroke="#3a2704" stroke-width="3"/>
+          <path d="M52 2 L68 2 L60 20 Z" fill="#fff3a3" stroke="#3a2704" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span class="kicker">Premium Rewards</span>
+        <h2>Golden Wheel</h2>
+        <p>Go for gold and win Smartwatches, Powerbanks, Airpods and big Petrol rewards!</p>
+        <span class="cta">Spin the Gold <span aria-hidden="true">➜</span></span>
+      </a>
+
+    </main>
+
+    <footer class="foot">
+      Show your winning screen at the billing counter to claim your gift.<br>
+      Terms &amp; conditions apply. Management decision is final.
+    </footer>
+  </div>
+</body>
+</html>
